@@ -1,2 +1,7 @@
-package ru.organization.spring.Music;public enum Musics {
+package ru.organization.spring.Music;
+
+import org.springframework.stereotype.Component;
+
+public enum Musics {
+    ROCK, CLASSICAL;
 }

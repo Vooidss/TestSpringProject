@@ -1,5 +1,5 @@
-package ru.organization.spring.Music;
+package ru.organization.spring.Nationality;
 
 public interface Nationality{
-    void getNationality();
+    String getNationality();
 }

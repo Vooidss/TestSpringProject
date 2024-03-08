@@ -1,12 +1,12 @@
-package ru.organization.spring;
+package ru.organization.spring.Task_1;
 
 import lombok.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
-import ru.organization.spring.Music.Music;
-import ru.organization.spring.Music.Musics;
-import ru.organization.spring.Nationality.Nationality;
+import ru.organization.spring.Task_1.Music.Music;
+import ru.organization.spring.Task_1.Music.Musics;
+import ru.organization.spring.Task_1.Nationality.Nationality;
 
 import java.util.ArrayList;
 import java.util.List;

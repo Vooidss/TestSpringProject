@@ -1,4 +1,4 @@
-package ru.organization.spring.Nationality;
+package ru.organization.spring.Task_1.Nationality;
 
 public interface Nationality{
     String getNationality();

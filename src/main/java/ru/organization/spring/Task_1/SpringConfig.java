@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
 @Configuration
-@ComponentScan("ru.organization.spring")
+@ComponentScan("ru.organization.spring.Task_1")
 @PropertySource("classpath:PlayerMusic.properties")
 public class SpringConfig {
 }

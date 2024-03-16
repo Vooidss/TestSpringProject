@@ -11,10 +11,21 @@
     <label for="name" >Enter name</label>
     <input type = "text" th:field = "*{name}" id = "name">
 
+    <div style = "color: red" th:if = "${#fields.hasErrors('name')}" th:errors = "*{name}">Name error</div>
+
     <br/>
 
-    <label for = "yearsAgo">Enter years ago</label>
-    <input type = "text" th:field = "*{yearsAgo}" id = "yearsAgo">
+    <label for = "age">Enter years ago</label>
+    <input type = "text" th:field = "*{age}" id = "age">
+
+    <div style = "color: red" th:if = "${#fields.hasErrors('age')}" th:errors = "*{age}">Name error</div>
+
+    <br/>
+
+    <label for = "email">Enter Email</label>
+    <input type = "text" th:field = "*{email}" id = "email">
+
+    <div style = "color: red" th:if = "${#fields.hasErrors('email')}" th:errors = "*{email}">Name error</div>
 
     <br/>
 

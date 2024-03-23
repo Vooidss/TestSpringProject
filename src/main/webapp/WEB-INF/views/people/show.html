@@ -8,22 +8,30 @@
 
 <div>
 
-        Name: <a th:text = "${person.getName()}">Value</a>
-    <br/>
-        Years ago: <a th:text = "${person.getAge()}"> Value</a>
-    <br/>
-        Email: <a th:text = "${person.getEmail} "> Value</a>
-    <br/>
-        id: <a th:text = "${person.getId()} "> Value</a>
-    <br/>
-    <a th:href = "@{/people/{id}/edit(id = ${person.getId()})}">Edit</a>
-    <br/>
+  ФИО: <a th:text = "${person.getFull_name()}">Value</a>
+  <br/>
+  Год рождения: <a th:text = "${person.getYears_of_birth()} "> Value</a>
+  <br/>
+  id: <a th:text = "${person.getId()} "> Value</a>
+  <br/>
 
-    <br/>
+  <a th:href = "@{/people/{id}/edit(id = ${person.getId()})}">Изменить данные</a>
+  <br/>
 
-    <form th:method = "DELETE" th:action = "@{/people/{id}(id = ${person.getId()})}">
-        <input type = "submit" value = "Delete"/>
-    </form>
+  <hr/>
+
+  <a th:if="${bookList.isEmpty()}">Нет книг <hr/></a>
+
+  <div th:if="${!bookList.isEmpty()}">
+    <div th:each=" booka : ${bookList}">
+      <a th:text="${booka.getName()}">book</a>
+   </div>
+    <hr/>
+  </div>
+
+  <form th:method = "DELETE" th:action = "@{/people/{id}(id = ${person.getId()})}">
+    <input type = "submit" value = "Удалить"/>
+  </form>
 
 </div>
 

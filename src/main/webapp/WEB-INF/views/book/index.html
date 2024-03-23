@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Books</title>
+</head>
+<body>
+
+<div id = "header">
+    <a th:href="@{/people}">Перейти asd людей</a>
+</div>
+
+<hr/>
+
+<div th:each="booka : ${book}">
+    <a th:href="@{/book/{id}(id = ${booka.getId})}"
+        th:text="${booka.getName()}">book</a>
+</div>
+
+<hr/>
+
+<div>
+    <a th:href = "@{/book/new}">Добавить новую кингу</a>
+</div>
+
+</body>
+</html>

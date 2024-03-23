@@ -12,17 +12,13 @@ public class Person {
 
     private int id;
 
-    @NotEmpty(message = "Name should not be empty")
-    @Size(min = 1, max = 30,message = "Name should be between 1 and 30 characters")
-    private String name;
+    @NotEmpty(message = "Поле не должно быть пустым")
+    @Size(min = 1, max = 30,message = "Имя должно состоять от 1 до 30 символов")
+    private String full_name;
 
-    @Min(value = 0,message = "Age should be greater than 0")
-    @Max(value = 99, message = "Age should be less than 99")
-    private int age;
-
-    @NotEmpty(message = "Email should not be empty")
-    @Email(message = "Incorrect email form")
-    private String email;
+    @Min(value = 1950,message = "Год рождения должен быть минимум 1950")
+    @Max(value = 2024, message = "Год рождения должен быть максимум 2024")
+    private int years_of_birth;
 
     public Person(){
 
